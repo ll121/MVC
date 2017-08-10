@@ -1,0 +1,41 @@
+<html><!--模板-->
+<head><title>{$title}</title>
+</head>
+<body>
+    {$con}
+	<br />
+	{if $stu}
+	我是真区间
+	这里的大括号并不是固定的，<br />
+	因为我们的正则约定的是从大括号开始匹配<br />
+	所以这也是大括号开始<br />
+	{else}<br />
+	我是假区间
+	{/if}
+	<br />
+	{switch $num case 4}在处理switch时，别忘了在后面跟着一种情况否则显示为空（错误）
+	
+	             第4个
+		  {break}
+	{case 1}
+	   第一个
+	   {break}
+	 {case 2}
+	   第2个
+	   {break}
+     {case 3}
+	   第3个
+	   {break}
+	   {/switch}<br />
+	   {include footer.html}在进行include时要进行判断，引进来的文件里面若是包含的有变量也要解析
+	   <!-- {foreach $arr as $key => $value}
+	       {$key}
+		   {$value}
+		   {/foreach} -->
+	   
+	   
+	   
+	   
+	   
+</body>
+</html>
